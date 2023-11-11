@@ -5,6 +5,11 @@ function initMap() {
         mapId: 'e582376b1751adb1'
     });
     directionsDisplay = new google.maps.DirectionsRenderer({ map });
+    // Assuming you have localContextMapView defined somewhere
+    localContextMapView = new LocalContextMapView(map); // Replace this line with the actual initialization of localContextMapView
+
+    // Add this line to trigger the search
+    localContextMapView.search();
 }
 
 if (navigator.geolocation) {
